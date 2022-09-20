@@ -39,9 +39,17 @@ public class Main {
         System.out.println("Ваша корзина покупок:");
         int sum = 0;
 
+//        boolean doBonus = sum >= MIN_COST_FOR_BONUS;
+//        for (int i = 0; i < products.length; i++) {
+//            if (counts[i] != 0) {
+//                System.out.println("\t" + products[i] + " " + (doBonus ? counts[i] + 1 : counts[i]) + " шт. за " + (prices[i] * counts[i]) + " руб.");
+//            }
+//        }
+
         boolean doBonus = sum >= MIN_COST_FOR_BONUS;
         for (int i = 0; i < products.length; i++) {
             if (counts[i] != 0) {
+
                 boolean isOnSale = false;
                 for (String saleProduct : productsOnSale) {
                     if (products[i].equals(saleProduct)) {
